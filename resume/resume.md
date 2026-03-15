@@ -96,8 +96,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 # Resume
 
-## Mohit Kumar
-
 Robotics Engineer focused on mobile robotics, navigation algorithms, and robotics software systems.
 
 ### Experience
