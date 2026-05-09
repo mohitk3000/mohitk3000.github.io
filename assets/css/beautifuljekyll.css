@@ -1244,7 +1244,6 @@ body.dark-mode .blog-tags a:hover {
   border-radius: 0.5rem;
   padding: 0.4rem 0.6rem;
   cursor: pointer;
-  font-size: 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1254,8 +1253,8 @@ body.dark-mode .blog-tags a:hover {
   text-decoration: none;
   outline: none;
   line-height: 1.25rem;
-  padding-top: 0.9375rem;
-  padding-bottom: 0.9375rem;
+  padding-top: 0.8375rem;
+  padding-bottom: 0.8375rem;
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.8125rem;
