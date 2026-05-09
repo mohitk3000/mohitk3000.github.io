@@ -29,6 +29,7 @@ let BeautifulJekyllJS = {
     BeautifulJekyllJS.initImgs();
 
     BeautifulJekyllJS.initSearch();
+    BeautifulJekyllJS.initDarkMode();
   },
 
   initNavbar : function() {
@@ -134,6 +135,42 @@ let BeautifulJekyllJS = {
         $("body").removeClass("overflow-hidden");
       }
     });
+  },
+
+  initDarkMode : function() {
+    // Load dark mode preference from localStorage
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
+      $("body").addClass("dark-mode");
+      $("#theme-toggle-icon").removeClass("fa-moon-o").addClass("fa-sun-o");
+    } else if (savedTheme === 'light') {
+      $("body").removeClass("dark-mode");
+      $("#theme-toggle-icon").removeClass("fa-sun-o").addClass("fa-moon-o");
+    } else {
+      $("#theme-toggle-icon").removeClass("fa-sun-o").addClass("fa-moon-o");
+    }
+
+    // Setup click handler for toggle
+    $("#theme-toggle").click(function(e) {
+      e.preventDefault();
+      BeautifulJekyllJS.toggleDarkMode();
+    });
+  },
+
+  toggleDarkMode : function() {
+    const isDarkMode = $("body").hasClass("dark-mode");
+    
+    if (isDarkMode) {
+      $("body").removeClass("dark-mode");
+      localStorage.setItem('theme', 'light');
+      $("#theme-toggle-icon").removeClass("fa-sun-o").addClass("fa-moon-o");
+    } else {
+      $("body").addClass("dark-mode");
+      localStorage.setItem('theme', 'dark');
+      $("#theme-toggle-icon").removeClass("fa-moon-o").addClass("fa-sun-o");
+    }
   }
 };
 

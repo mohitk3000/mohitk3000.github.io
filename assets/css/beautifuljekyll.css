@@ -1124,3 +1124,126 @@ pre {
     display: inline-block;
   }
 }
+
+/* --- Dark Mode --- */
+
+body.dark-mode {
+  --page-col: #1a1a1a;
+  --text-col: #e0e0e0;
+  --link-col: #5dade2;
+  --hover-col: #76d7c4;
+  --navbar-col: #2d2d2d;
+  --navbar-text-col: #e0e0e0;
+  --navbar-border-col: #444444;
+  --footer-col: #2d2d2d;
+  --footer-text-col: #999999;
+  --footer-link-col: #5dade2;
+  --footer-hover-col: #76d7c4;
+  --mid-col: #b0b0b0;
+}
+
+body.dark-mode {
+  color-scheme: dark;
+  background-color: var(--page-col);
+  color: var(--text-col);
+}
+
+body.dark-mode a {
+  color: var(--link-col);
+}
+
+body.dark-mode a:hover,
+body.dark-mode a:focus {
+  color: var(--hover-col);
+}
+
+body.dark-mode code {
+  color: #f8b500;
+  background-color: #2d2d2d;
+}
+
+body.dark-mode pre {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #444444;
+}
+
+body.dark-mode .highlight > pre {
+  border-left-color: #76d7c4;
+}
+
+body.dark-mode table tr {
+  background-color: var(--page-col);
+  border-color: #444444;
+}
+
+body.dark-mode table tr:nth-child(2n) {
+  background-color: #242424;
+}
+
+body.dark-mode table tr th,
+body.dark-mode table tr td {
+  border-color: #444444;
+}
+
+body.dark-mode .post-preview {
+  border-bottom-color: #444444;
+}
+
+body.dark-mode .post-preview a {
+  color: var(--text-col);
+}
+
+body.dark-mode .jumbotron {
+  background: #2d2d2d;
+}
+
+body.dark-mode hr {
+  border-color: #444444;
+}
+
+body.dark-mode blockquote {
+  color: var(--mid-col);
+}
+
+body.dark-mode .navbar-custom {
+  background-color: var(--navbar-col);
+  border-bottom-color: var(--navbar-border-col);
+}
+
+body.dark-mode .navbar-custom .navbar-brand,
+body.dark-mode .navbar-custom .navbar-nav .nav-link {
+  color: var(--navbar-text-col);
+}
+
+body.dark-mode footer {
+  background-color: var(--footer-col);
+  border-top-color: #444444;
+}
+
+body.dark-mode footer p.text-muted {
+  color: var(--footer-text-col) !important;
+}
+
+body.dark-mode footer a {
+  color: var(--footer-link-col);
+}
+
+body.dark-mode .blog-tags a {
+  color: var(--text-col);
+  border-color: #444444;
+}
+
+body.dark-mode .blog-tags a:hover {
+  border-color: var(--text-col);
+}
+
+#theme-toggle {
+  margin-left: 0.625rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+  color: var(--hover-col);
+}
