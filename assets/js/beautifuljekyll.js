@@ -144,12 +144,12 @@ let BeautifulJekyllJS = {
     
     if (savedTheme === 'dark' || (savedTheme === null && prefersDark)) {
       $("body").addClass("dark-mode");
-      $('#theme-toggle-icon').removeClass('fas fa-moon').addClass('fas fa-sun');
+      $('#theme-toggle-icon').text('🌙');
     } else if (savedTheme === 'light') {
       $('body').removeClass('dark-mode');
-      $('#theme-toggle-icon').removeClass('fas fa-sun').addClass('fas fa-moon');
+      $('#theme-toggle-icon').text('☀️');
     } else {
-      $('#theme-toggle-icon').removeClass('fas fa-sun').addClass('fas fa-moon');
+      $('#theme-toggle-icon').text('☀️');
     }
 
     // Setup click handler for toggle
@@ -165,11 +165,11 @@ let BeautifulJekyllJS = {
     if (isDarkMode) {
       $("body").removeClass("dark-mode");
       localStorage.setItem('theme', 'light');
-      $('#theme-toggle-icon').removeClass('fas fa-sun').addClass('fas fa-moon');
+      $('#theme-toggle-icon').text('☀️');
     } else {
       $('body').addClass('dark-mode');
       localStorage.setItem('theme', 'dark');
-      $('#theme-toggle-icon').removeClass('fas fa-moon').addClass('fas fa-sun');
+      $('#theme-toggle-icon').text('🌙');
     }
   }
 };

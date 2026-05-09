@@ -1238,12 +1238,39 @@ body.dark-mode .blog-tags a:hover {
   border-color: var(--text-col);
 }
 
-#theme-toggle {
-  margin-left: 0.625rem;
+.theme-toggle-btn {
+  background-color: transparent;
+  border: 2px solid var(--navbar-text-col);
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
   cursor: pointer;
-  transition: color 0.3s ease;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--navbar-text-col);
+  margin-left: 0.625rem;
+  text-decoration: none;
+  outline: none;
 }
 
-#theme-toggle:hover {
-  color: var(--hover-col);
+.theme-toggle-btn:hover {
+  border-color: var(--hover-col);
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: scale(1.1);
+}
+
+.theme-toggle-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .theme-toggle-btn {
+  border-color: var(--navbar-text-col);
+}
+
+body.dark-mode .theme-toggle-btn:hover {
+  border-color: var(--hover-col);
+  background-color: rgba(255, 255, 255, 0.1);
 }
