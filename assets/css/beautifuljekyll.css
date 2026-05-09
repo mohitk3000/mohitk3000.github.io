@@ -1253,12 +1253,19 @@ body.dark-mode .blog-tags a:hover {
   margin-left: 0.625rem;
   text-decoration: none;
   outline: none;
+  line-height: 1.25rem;
+  padding-top: 0.9375rem;
+  padding-bottom: 0.9375rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  letter-spacing: 0.0625rem;
 }
 
 .theme-toggle-btn:hover {
   border-color: var(--hover-col);
   background-color: rgba(0, 0, 0, 0.05);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .theme-toggle-btn:focus {
